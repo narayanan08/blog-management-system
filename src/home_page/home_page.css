@@ -1,0 +1,131 @@
+/* body{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+} */
+header{
+    background-color:rgb(62,82,22) ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-box input{
+    width:200px;
+    height:40px;
+    border-radius: 10px;
+    margin:10px 0px 0px 0px;
+    
+    
+}
+.account-properties{
+    display: flex;
+    margin-right: 20px;
+
+}
+.account-properties img{
+    height:40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 90px;
+    margin-top: 20px;
+    
+}
+
+span{
+    border-width: 50px;
+    border-radius: 10px;
+    padding:10px;
+    border-color: black;
+    color:rgb(208, 233, 20);
+    background-color: rgb(62, 82, 22);
+    font-size: 40px;
+    display:flex;
+    cursor: pointer;
+
+}
+span:hover{
+    cursor: pointer;
+}
+.mainBody{
+    display: flex;
+    justify-content: space-between;
+}
+
+.myAllBlogs, .myFollowingBlogs{
+    border-style:solid;
+    border-width: 2px;
+    height: 340px;
+    width: fit-content;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 10px;
+    overflow-y: scroll;
+
+}
+
+div[class="blog"]{
+    margin:10px 10px 0px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color:white;
+    width:200px;
+    height:fit-content;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.blog-header{
+    background-color: white;
+    border-style:solid;
+    border-width: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    text-align:left;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.blog-title{
+    color:black;
+    font-size: medium;
+    
+}
+
+div[class="blog-footer"]{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+div[class="likes"]{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: */
+    float:left;
+
+    
+}
+
+div[class="likes"]>img{
+    height:20px;
+    width:20px;
+    margin-left: 0px;
+    vertical-align: top;
+}
+div[class="likes"]>p{
+    color:grey;
+    vertical-align: top;
+}
+
+div[class="comments"]{
+    float:right;
+    margin-right: 10px;
+
+}
