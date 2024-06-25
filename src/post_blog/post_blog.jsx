@@ -7,7 +7,7 @@ export default function PostBlog(){
     const [title,setTitle]=useState(" ");
     const [content,setContent]= useState(" ");
     const [access,setAccess]= useState(" ");
-    const {username} = useParams();
+    const {userId} = useParams();
 
     const savePost = () => {
         console.log(title);
@@ -33,10 +33,11 @@ export default function PostBlog(){
         // console.log(date.split(" "));
 
         const data={
-            username,title,content,access,date
+            userId,title,content,access,date
         }
         
-        const response = axios.post("http://localhost:8080/",)
+        const response = axios.post("http://localhost:8080/users/",data);
+        console.log(response);
     }
 
     return(

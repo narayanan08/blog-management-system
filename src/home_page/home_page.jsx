@@ -8,6 +8,7 @@ import axios from "axios";
 
 export default function HomePage({data}){
     const [blogs,setBlogs]=useState([]);
+    const [userId,setUserId]= useState("");
     const navigate = useNavigate();
     let {credentials}= useParams();
     console.log(credentials);
@@ -18,7 +19,9 @@ export default function HomePage({data}){
     useEffect(() => {
         const fetchBlogs = async() => {
         try {
-            const response = await axios.get("http://localhost:8080/posts/",{username,password});
+            const response = await axios.get("http://localhost:8080/posts/getdetails",{username,password});
+            setUserId(response.id);
+            console.log(response.id);
             // console.log(response.data.blogs);
             setBlogs(response.data);
         } catch(err){
@@ -39,7 +42,7 @@ export default function HomePage({data}){
 //   console.log(blogs);
     return(
         <>
-        <Header username={username}/>
+        <Header userId={userId}/>
         <div class="mainBody">
             <GetMyAllBlogs blogs={blogs}/>
             {/* <p>{credentials}</p> */}
@@ -50,11 +53,11 @@ export default function HomePage({data}){
     
 }
 
-function Header({username}){
+function Header({username,userId}){
     const logo="BlogSpace";
     const navigate = useNavigate();
     const handlePost = () =>{
-        navigate(`/postBlog/${username}`)
+        navigate(`/postBlog/${userId}`)
     }
     return(
         <>
@@ -67,7 +70,7 @@ function Header({username}){
                     <input type="text" placeholder="search here..."></input>
                 </div>
                 <div className="account-properties">
-                    <span onClick={handlePost}>Post</span>
+                    <span onClick={(userId)=>{handlePost(userId)}}>Post</span>
                     <span>Followers</span>
                     <span>Following</span>
                     <img src={profile_pic}></img>
