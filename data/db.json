@@ -1,0 +1,232 @@
+{
+    "blogs":[
+        {
+           "title":"Python",
+           "timeStamp":"18:30 2024-06-10",
+           "likes":98,
+           "comments":[
+            {
+                "comment_id":1,
+                "content":"super"
+            },
+            {
+                "comment_id":2,
+                "content":"awesome"
+            }
+           ]
+        },
+        {
+            "title":"C++",
+            "timeStamp":"17:30 2024-06-10",
+            "likes":94,
+            "comments":[
+            {
+                "comment_id":1,
+                "content":"great"
+            },
+            {
+                "comment_id":2,
+                "content":"keep it up!"
+            }
+           ]
+
+        },
+        {
+            "title":"Javascript",
+            "timeStamp":"16:30 2024-06-10",
+            "likes":90,
+            "comments":[
+            {
+                "comment_id":1,
+                "content":"informative"
+            },
+            {
+                "comment_id":2,
+                "content":"learnt something new"
+            }
+           ]
+        },
+        {
+            "title":"Java",
+            "timeStamp":"18:30 2024-06-10",
+            "likes":98,
+            "comments":[
+             {
+                 "comment_id":1,
+                 "content":"super"
+             },
+             {
+                 "comment_id":2,
+                 "content":"awesome"
+             }
+            ]
+         },
+         {
+            "title":"Dart",
+            "timeStamp":"18:30 2024-06-10",
+            "likes":98,
+            "comments":[
+             {
+                 "comment_id":1,
+                 "content":"super"
+             },
+             {
+                 "comment_id":2,
+                 "content":"awesome"
+             }
+            ]
+         },
+         {
+            "title":"Python",
+            "timeStamp":"18:30 2024-06-10",
+            "likes":98,
+            "comments":[
+             {
+                 "comment_id":1,
+                 "content":"super"
+             },
+             {
+                 "comment_id":2,
+                 "content":"awesome"
+             }
+            ]
+         },
+         {
+             "title":"C++",
+             "timeStamp":"17:30 2024-06-10",
+             "likes":94,
+             "comments":[
+             {
+                 "comment_id":1,
+                 "content":"great"
+             },
+             {
+                 "comment_id":2,
+                 "content":"keep it up!"
+             }
+            ]
+ 
+         },
+         {
+             "title":"Javascript",
+             "timeStamp":"16:30 2024-06-10",
+             "likes":90,
+             "comments":[
+             {
+                 "comment_id":1,
+                 "content":"informative"
+             },
+             {
+                 "comment_id":2,
+                 "content":"learnt something new"
+             }
+            ]
+         },
+         {
+             "title":"Java",
+             "timeStamp":"18:30 2024-06-10",
+             "likes":98,
+             "comments":[
+              {
+                  "comment_id":1,
+                  "content":"super"
+              },
+              {
+                  "comment_id":2,
+                  "content":"awesome"
+              }
+             ]
+          },
+          {
+             "title":"Dart",
+             "timeStamp":"18:30 2024-06-10",
+             "likes":98,
+             "comments":[
+              {
+                  "comment_id":1,
+                  "content":"super"
+              },
+              {
+                  "comment_id":2,
+                  "content":"awesome"
+              }
+             ]
+          },
+          {
+            "title":"Python",
+            "timeStamp":"18:30 2024-06-10",
+            "likes":98,
+            "comments":[
+             {
+                 "comment_id":1,
+                 "content":"super"
+             },
+             {
+                 "comment_id":2,
+                 "content":"awesome"
+             }
+            ]
+         },
+         {
+             "title":"C++",
+             "timeStamp":"17:30 2024-06-10",
+             "likes":94,
+             "comments":[
+             {
+                 "comment_id":1,
+                 "content":"great"
+             },
+             {
+                 "comment_id":2,
+                 "content":"keep it up!"
+             }
+            ]
+ 
+         },
+         {
+             "title":"Javascript",
+             "timeStamp":"16:30 2024-06-10",
+             "likes":90,
+             "comments":[
+             {
+                 "comment_id":1,
+                 "content":"informative"
+             },
+             {
+                 "comment_id":2,
+                 "content":"learnt something new"
+             }
+            ]
+         },
+         {
+             "title":"Java",
+             "timeStamp":"18:30 2024-06-10",
+             "likes":98,
+             "comments":[
+              {
+                  "comment_id":1,
+                  "content":"super"
+              },
+              {
+                  "comment_id":2,
+                  "content":"awesome"
+              }
+             ]
+          },
+          {
+             "title":"Dart",
+             "timeStamp":"18:30 2024-06-10",
+             "likes":98,
+             "comments":[
+              {
+                  "comment_id":1,
+                  "content":"super"
+              },
+              {
+                  "comment_id":2,
+                  "content":"awesome"
+              }
+             ]
+          }
+    ]
+}
