@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter as Router, Switch, useNavigate ,Route, Routes, Link} from 'react-router-dom';
+// import {format} from 'date-fns';
+import Login from './login/login';
+import BlogForm from './blog_form/blog_form.jsx';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <Routes>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/blogForm" element={<BlogForm/>}/>
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+
+
