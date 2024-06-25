@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AuthService from '../../services/auth';
-import "./register.css";
+import "./login.css";
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -8,7 +8,7 @@ export default function Register() {
   const [message, setMessage] = useState('');
 
   const handleRegister = async (e) => {
-    e.preventDefault
+    e.preventDefault();
 
     try {
       await AuthService.register(username, password);
@@ -17,31 +17,25 @@ export default function Register() {
       setMessage(error.response.data.message);
     }
   };
-  const logo="BlogSpace";
+
+  const logo = "BlogSpace";
+
   return (
-    <>
     <div className='main-middle'>
-      <div className="logo">
-          <p>{logo}</p>
-      </div>
+      <p>{logo}</p>
       <div className="credentials">
-      {/* <form onSubmit={handleRegister}> */}
-        <div>
+        <div className="input-container">
           <label>Username</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
-        <div>
+        <div className="input-container">
           <label>Password</label>
-          <input type="password"  value={password}  onChange={(e) => setPassword(e.target.value)}/>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button type="submit" onClick={handleRegister}>Register</button>
-        {/* {message && <div>{message}</div>} */}
-      {/* </form> */}
       </div>
     </div>
+    <>
     </>
-    
   );
-};
-
-
+}

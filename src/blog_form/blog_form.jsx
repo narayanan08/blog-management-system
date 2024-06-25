@@ -15,6 +15,8 @@ const BlogForm = () => {
                     'Authorization': `Bearer ${token}`
                 }
             };
+
+            console.log( { title, content, access });
             const response = await axios.post('http://localhost:8080/posts/users', { title, content, access }, config);
             // Handle successful blog creation (e.g., show success message)
         } catch (error) {
