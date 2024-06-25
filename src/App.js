@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Switch, useNavigate ,Route, Routes, Link} from 
 // import {format} from 'date-fns';
 import Login from './login/login';
 import BlogForm from './blog_form/blog_form.jsx';
+import Register from './registration/registration';
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
             <Route path="/blogForm" element={<BlogForm/>}/>
           </Routes>
         </div>

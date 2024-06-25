@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "./blog_form.css";
 
 const BlogForm = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [isPublic, setIsPublic] = useState(true);  // Default to public
+    const [access, setAccess] = useState("");  // Default to public
 
     const handleCreateBlog = async () => {
         try {
@@ -14,22 +15,27 @@ const BlogForm = () => {
                     'Authorization': `Bearer ${token}`
                 }
             };
-            const response = await axios.post('/api/blogs', { title, content, isPublic }, config);
+            const response = await axios.post('http://localhost:8080/posts/users', { title, content, access }, config);
             // Handle successful blog creation (e.g., show success message)
         } catch (error) {
             console.error('Blog creation failed:', error);
             // Handle blog creation error (e.g., show error message)
         }
     };
-
+    const logo="BlogSpace";
     return (
-        <div>
-            <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-            <textarea placeholder="Content" value={content} onChange={(e) => setContent(e.target.value)} />
-            <label>
-                Public:
-                <input type="checkbox" checked={isPublic} onChange={(e) => setIsPublic(e.target.checked)} />
-            </label>
+        <div className="main-body">
+            <div className='logoo'>
+                {logo}
+            </div>
+            <div className='main-body-blogForm'>
+                <textarea id="title" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} /><br></br>
+                <textarea id="content" placeholder="Content" value={content} onChange={(e) => setContent(e.target.value)} />
+            </div>
+            <div>
+            <button onClick={()=>setAccess("public")}>Public</button> 
+            <button onClick={()=>setAccess("private")}>Private</button>
+            </div>
             <button onClick={handleCreateBlog}>Create Blog</button>
         </div>
     );
