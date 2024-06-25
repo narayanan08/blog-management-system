@@ -42,7 +42,7 @@ export default function HomePage({data}){
 //   console.log(blogs);
     return(
         <>
-        <Header userId={userId}/>
+        <Header username={username} password={password} userId={userId}/>
         <div class="mainBody">
             <GetMyAllBlogs blogs={blogs}/>
             {/* <p>{credentials}</p> */}
@@ -53,11 +53,11 @@ export default function HomePage({data}){
     
 }
 
-function Header({username,userId}){
+function Header({username,password,userId}){
     const logo="BlogSpace";
     const navigate = useNavigate();
     const handlePost = () =>{
-        navigate(`/postBlog/${userId}`)
+        navigate(`/postBlog/${username}+${password}+${userId}`);
     }
     return(
         <>

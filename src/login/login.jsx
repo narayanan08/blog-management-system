@@ -17,7 +17,7 @@ export default function Login(){
     const navigate = useNavigate();
 
     const handleSignUp = () =>{
-        navigate("/signup");
+        navigate("/signUp");
     }
 
     const handleLogin = async (e) =>{

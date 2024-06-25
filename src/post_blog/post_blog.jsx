@@ -3,12 +3,23 @@ import {useState} from "react";
 import profile_pic from "../home_page/profile_pic.jpg";
 import axios from "axios";
 import "./post_blog.css";
+
+//save blog using userId, navigate to home page and display user specific home page using username and password
+
+
 export default function PostBlog(){
+
     const [title,setTitle]=useState(" ");
     const [content,setContent]= useState(" ");
     const [access,setAccess]= useState(" ");
-    const {userId} = useParams();
 
+    const {parameters} = useParams();
+    const userDetails = parameters.split("+");  // parameters contain username+password+userId because HomePage component needs username and password for giving user specific home page
+                                        // we use only user_id here. 
+    const username = userDetails[0];
+    const password = userDetails[1];
+    const userId = userDetails[2];
+    
     const savePost = () => {
         console.log(title);
         console.log(content);
@@ -37,6 +48,10 @@ export default function PostBlog(){
         }
         
         const response = axios.post("http://localhost:8080/users/",data);
+        ///After successful saving of the post
+
+        navigate(`/homepage/${username}+${password}`)
+
         console.log(response);
     }
 
