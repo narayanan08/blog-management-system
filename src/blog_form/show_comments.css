@@ -1,0 +1,54 @@
+header{
+    background-color:rgb(62,82,22) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:60px;
+}
+
+#comment-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: larger;
+}
+
+
+#instruction{
+    display: flex;
+}
+span{
+    border-radius: 10px;
+    border-color: black;
+    color:rgb(208, 233, 20);
+    background-color: rgb(62, 82, 22);
+    font-size: 40px;
+    display:flex;
+    cursor: pointer;
+
+}
+
+button{
+    border-radius: 0px;
+    margin:10px 0px 10px 0px;
+}
+
+#comments{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    margin-left:20px;
+
+}
+
+#comment{
+    border-style: solid;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img{
+    border-radius: 50px;
+}
