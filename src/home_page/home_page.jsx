@@ -175,10 +175,10 @@ function GetOneBlog({blog_id,title,content,likesCount,timeStamp}){
        
     }
 
-    const showComments = (blog_id) =>{
-        console.log(blog_id);
-        navigate(`/showComments`,{state:{postId:blog_id}});
-    }
+    // const showComments = (blog_id) =>{
+    //     console.log(blog_id);
+    //     navigate(`/showComments`,{state:{postId:blog_id}});
+    // }
 
 
     return(
