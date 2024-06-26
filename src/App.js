@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Switch, useNavigate ,Route, Routes, Link} from 
 import Login from './login/login';
 import BlogForm from './blog_form/blog_form.jsx';
 import Register from './registration/registration.jsx';
+import HomePage from './home_page/home_page.jsx';
+import ShowComments from './blog_form/show_comments.jsx';
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Login/>}/>
+            <Route path="/homePage" element={<HomePage/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/blogForm" element={<BlogForm/>}/>
+            <Route path="/showComments/:postId" element={<ShowComments/>}/>
           </Routes>
         </div>
       </Router>

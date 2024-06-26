@@ -9,7 +9,8 @@ export default function Register () {
     const navigate = useNavigate();
     const handleRegister = async () => {
         try {
-            await axios.post('http://localhost:8080/users', { username, password });
+            await axios.post('http://localhost:8080/users', { 
+                username, password});
             alert("Successfully Registered");
             // Handle successful registration (e.g., show success message)
         } catch (error) {

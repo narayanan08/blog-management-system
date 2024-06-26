@@ -1,0 +1,210 @@
+/* body{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+} */
+
+header{
+    background-color:rgb(62,82,22) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:60px;
+}
+
+span{
+    border-radius: 10px;
+    border-color: black;
+    color:rgb(208, 233, 20);
+    background-color: rgb(62, 82, 22);
+    font-size: 40px;
+    display:flex;
+    cursor: pointer;
+
+}
+
+#comments{
+    transition: text-decoration 0.3s ease;
+}
+
+#comments:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+span[id="followers"]{
+
+}
+
+span[id="following"]{
+
+}
+#blog-title{
+    transition: text-decoration 0.3s ease;
+}
+#blog-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img{
+    height: 50px;
+    width:50px;
+}
+#account-properties{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search{
+    padding-top:10px;
+}
+#followers{
+    color:rgb(208, 233, 20);
+    font-size: 40px;
+    /* margin-right:0px;
+    margin-top: 0px;
+    margin-bottom:40px; */
+}
+#following{
+    color:rgb(208, 233, 20);
+    font-size: 40px;
+    /* margin-left:0px;
+    margin-top: 0px; */
+}
+
+div[class="blog"]{
+    margin:10px 10px 0px 200px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color:white;
+    width:1000px;
+    height:fit-content;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#main-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#content{
+    /* width:1200px; */
+    /* border-style:solid; */
+}
+
+#myBlogs{
+    margin-top: 20px;
+    border-style: solid;
+    overflow-y: scroll;
+    height:600px;
+    /* width:800px; */
+}
+
+#decoration{
+    background-color: rgb(208,233,20);
+    width:300px;
+    height: 1000px;
+}
+/* 
+.search-box input{
+    width:200px;
+    height:40px;
+    border-radius: 10px;
+    margin:10px 0px 0px 0px;
+    
+    
+}
+.account-properties{
+    display: flex;
+    margin-right: 20px;
+
+}
+.account-properties img{
+    height:40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 90px;
+    margin-top: 20px;
+    
+}
+
+
+span:hover{
+    cursor: pointer;
+}
+.mainBody{
+    display: flex;
+    justify-content: space-between;
+}
+
+.myAllBlogs, .myFollowingBlogs{
+    border-style:solid;
+    border-width: 2px;
+    height: 340px;
+    width: fit-content;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 10px;
+    overflow-y: scroll;
+
+}
+
+
+
+.blog-header{
+    background-color: white;
+    border-style:solid;
+    border-width: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    text-align:left;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.blog-title{
+    color:black;
+    font-size: medium;
+    
+}
+
+div[class="blog-footer"]{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+div[class="likes"]{
+    display: flex;
+    flex-direction: row;
+
+    float:left;
+
+    
+}
+
+div[class="likes"]>img{
+    height:20px;
+    width:20px;
+    margin-left: 0px;
+    vertical-align: top;
+}
+div[class="likes"]>p{
+    color:grey;
+    vertical-align: top;
+}
+
+div[class="comments"]{
+    float:right;
+    margin-right: 10px;
+
+} */

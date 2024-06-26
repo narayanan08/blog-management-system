@@ -10,11 +10,13 @@ const Login = () => {
     const logo="BlogSpace";
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/users/login', { username, password });
+            const response = await axios.post('http://localhost:8080/users/login',
+                 { username, password});
             console.log(response);
             // localStorage.setItem('token', response.data.token);
             localStorage.setItem('token', response.data);
-            navigate("/blogForm");
+            // navigate("/blogForm");
+            navigate("/homePage")
 
             // Handle successful login (e.g., redirect to dashboard)
 

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./blog_form.css";
+import { useNavigate } from 'react-router-dom';
 
-const BlogForm = () => {
+export default function BlogForm(){
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [access, setAccess] = useState("");  // Default to public
-
+    const [status, setStatus] = useState("");  // Default to public
+    const navigate=useNavigate();
     const handleCreateBlog = async () => {
+
+        
         try {
             const token = localStorage.getItem('token');
             const config = {
@@ -16,9 +19,14 @@ const BlogForm = () => {
                 }
             };
 
-            console.log( { title, content, access });
-            const response = await axios.post('http://localhost:8080/posts/users', { title, content, access }, config);
+            console.log( { title, content, status });
+            const response = await axios.post('http://localhost:8080/posts/users', { 
+                title, content, status }, 
+                config);
             // Handle successful blog creation (e.g., show success message)
+            alert("Post saved successfully!");
+            navigate("/homePage");
+            
         } catch (error) {
             console.error('Blog creation failed:', error);
             // Handle blog creation error (e.g., show error message)
@@ -35,12 +43,12 @@ const BlogForm = () => {
                 <textarea id="content" placeholder="Content" value={content} onChange={(e) => setContent(e.target.value)} />
             </div>
             <div>
-            <button onClick={()=>setAccess("public")}>Public</button> 
-            <button onClick={()=>setAccess("private")}>Private</button>
+            <button onClick={()=>setStatus("public")}>Public</button> 
+            <button onClick={()=>setStatus("private")}>Private</button>
             </div>
             <button onClick={handleCreateBlog}>Create Blog</button>
         </div>
     );
 };
 
-export default BlogForm;
+
