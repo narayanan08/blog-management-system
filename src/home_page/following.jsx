@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./following.css";
 
 export default function Following() {
-    const [following, setFollowing] = useState([]);
+    const [following, setFollowing] = useState([
+        "user1",
+        "user2",
+        "user3"
+    ]);
+    // const [following, setFollowing] = useState([]);
     const logo = "BlogSpace";
     const navigate = useNavigate();
 
@@ -61,8 +67,9 @@ export default function Following() {
 
     return (
         <>
-            <div className="following-main-body">
-                <div className='following-logo'>
+            {/* <div className="following-main-body"> */}
+            <div>
+                <div className="following-logo">
                     {logo}
                 </div>
                 <div className="following-usernames">

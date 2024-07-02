@@ -1,5 +1,5 @@
 /* General styles */
-body {
+homepage-body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -15,54 +15,57 @@ header {
   padding: 10px 20px;
 }
 
-#logo {
+#homepage-logo {
   font-size: 24px;
   font-weight: bold;
 }
 
-#home-page-search {
+#homepage-home-page-search {
   position: relative;
 }
 
-#home-page-search input {
+#homepage-home-page-search input {
   padding: 10px;
   border: none;
   border-radius: 4px;
   width: 300px;
 }
 
-.username-list {
+.homepage-username-list {
   position: absolute;
   top: 40px;
   background: #fff;
-  width: 300px;
+  width: 320px;
   border: 1px solid #ddd;
   border-radius: 4px;
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
+  padding-left: 0px;
 }
 
-.username-list li {
+
+.homepage-username-list li {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
+  
 }
 
-.username-list li:hover {
+.homepage-username-list li:hover {
   background-color: #f0f0f0;
 }
 
-#account-properties {
+#homepage-account-properties {
   display: flex;
   align-items: center;
 }
 
-#account-properties div {
+#homepage-account-properties div {
   margin-left: 20px;
 }
 
-#account-properties span {
+#homepage-account-properties span {
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 4px;
@@ -70,17 +73,17 @@ header {
   transition: background-color 0.3s;
 }
 
-#account-properties span:hover {
+#homepage-account-properties span:hover {
   background-color: #555;
 }
 
 /* Main body styles */
-#main-body {
+#homepage-main-body {
   display: flex;
   padding: 20px;
 }
 
-#content {
+#homepage-content {
   flex: 1;
   padding: 20px;
   background-color: #fff;
@@ -88,16 +91,16 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#decoration {
+#homepage-decoration {
   flex: 0.3;
   padding: 20px;
 }
 
-#myBlogs {
+#homepage-myBlogs {
   margin-bottom: 20px;
 }
 
-.blog {
+.homepage-blog {
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -106,72 +109,75 @@ header {
   transition: box-shadow 0.3s;
 }
 
-.blog:hover {
+.homepage-blog:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.blog-header {
+.homepage-blog-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.blog-header p {
+.homepage-blog-header p {
   margin: 0;
 }
 
-#blog-title {
+#homepage-blog-title {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   color: #333;
   transition: color 0.3s;
+  display:flex;
+  padding-right:0px;
 }
 
-#username{
+#homepage-username{
   font-size: 18px;
   font-weight: bold;
   
   color: #333;
 }
 
-#blog-title:hover {
+#homepage-blog-title:hover {
   color: #007bff;
 }
 
-.content {
+.homepage-content {
   font-size: 16px;
   color: #555;
   margin-bottom: 10px;
+  display: flex;
 }
 
-.blog-footer {
+.homepage-blog-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.likes, .comments {
+.homepage-likes, .homepage-comments {
   display: flex;
   align-items: center;
 }
 
-.likes img {
+.homepage-likes img {
   width: 20px;
   height: 20px;
 }
 
-.likes p {
+.homepage-likes p {
   margin: 0 0 0 5px;
 }
 
-.comments a {
+.homepage-comments a {
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.comments a:hover {
+.homepage-comments a:hover {
   color: #0056b3;
 }

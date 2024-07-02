@@ -9,8 +9,12 @@ import axios from 'axios';
 export default function ShowComments() {
     const { postId,isLoggedInUser } = useParams();
     console.log("post id inside Showcomments="+postId);
-
-    const [comments, setComments] = useState([]);
+    const sampleComments = [
+        { id: 1, comment: "Great post!" },
+        { id: 2, comment: "Nice content." },
+        { id: 3, comment: "Looking forward to more." },
+    ];
+    const [comments, setComments] = useState([sampleComments]);
 
     //Actual data collection and filtering must come here
     function filterData(data) {

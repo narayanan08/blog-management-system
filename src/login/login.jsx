@@ -55,21 +55,24 @@ const Login = () => {
 
     return (
         <>
-            <div className='main-middle'>
-                <div className="logo">
+            <div className='login-main-middle'>
+                <div className="login-logo">
                     {logo}
                 </div>
-                <div className="credentials">
+                <div className="login-credentials">
                     <div>
                         <label>Username: </label>
-                        <input type="text" placeholder="Username" value={currusername} onChange={(e) => setCurrUsername(e.target.value)} />
+                        <input id="login-username" type="text" placeholder="Username" value={currusername} onChange={(e) => setCurrUsername(e.target.value)} />
                     </div>
                     <div>
                         <label>Password: </label>
-                        <input type="password" placeholder="Password" value={currpassword} onChange={(e) => setCurrPassword(e.target.value)} />
+                        <input id= "login-password" type="password" placeholder="Password" value={currpassword} onChange={(e) => setCurrPassword(e.target.value)} />
                     </div>
-                    <button id="login" onClick={handleLogin}>Login</button>
-                    <button id="register" onClick={handleSignup}>Register</button>
+                    <div id="buttons">
+                        <button id="login-login" onClick={handleLogin}>Login</button>
+                        <button id="login-register" onClick={handleSignup}>Register</button>
+                    </div>
+                    
                 </div>
             </div>
         </>

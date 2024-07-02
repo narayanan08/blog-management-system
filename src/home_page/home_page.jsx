@@ -24,6 +24,47 @@ const mockUsernames = [
     "sports_fanatic"
 ];
 
+const sampleBlogs = [
+    {
+        id: 1,
+        title: "First Blog",
+        likes: 10,
+        content: "This is the first blog content.",
+        status: "public",
+        created_at: new Date().toDateString(),
+    },
+    {
+        id: 2,
+        title: "Second Blog",
+        likes: 20,
+        content: "This is the second blog content.",
+        status: "public",
+        created_at: new Date().toDateString(),
+    },
+];
+
+const sampleFollowingBlogs = [
+    {
+        id: 3,
+        title: "Following Blog",
+        likes: 5,
+        content: "This is the following blog content.",
+        status: "public",
+        created_at: new Date().toDateString(),
+    },
+];
+
+const following = [
+    "user123",
+    "blogger456",
+    "tech_guru",
+    "coding_master",
+    "dev_enthusiast",
+    "designer_life",
+    "travel_lover",
+]
+
+
 export default function HomePage() {
     const token = localStorage.getItem("token");
     
@@ -186,9 +227,17 @@ export default function HomePage() {
 
     return (
         <>
-            <Header usernames={userNamesForSearch} />
-            <div id="main-body">
-                <div id="content">
+            {/* <Header usernames={userNamesForSearch} />
+            <div id="homepage-main-body">
+                <div id="homepage-content">
+                    <GetLoggedInUserBlogs blogs={blogs} isLoggedInUser={false} />
+                    <GetFollowingBlogs blogs={followingBlogs} isLoggedInUser={true} />
+                </div>
+                <div id="decoration"></div>
+            </div> */}
+            <Header usernames={userNamesForSearch}  />
+            <div id="homepage-main-body">
+                <div id="homepage-content">
                     <GetLoggedInUserBlogs blogs={blogs} isLoggedInUser={false} />
                     <GetFollowingBlogs blogs={followingBlogs} isLoggedInUser={true} />
                 </div>
@@ -198,7 +247,8 @@ export default function HomePage() {
     );
 }
 
-function Header({  usernames, followers, following }) {
+
+function Header({  usernames, following }) {
     const logo = "BlogSpace";
     const navigate = useNavigate();
     const token = localStorage.getItem("token");
@@ -257,8 +307,8 @@ function Header({  usernames, followers, following }) {
     return (
         <>
             <header>
-                <div><span id="logo">{logo}</span></div>
-                <div id="home-page-search">
+                <div><span id="homepage-logo">{logo}</span></div>
+                <div id="homepage-home-page-search">
                     <input
                         type="text"
                         placeholder="Search usernames..."
@@ -266,7 +316,7 @@ function Header({  usernames, followers, following }) {
                         onChange={handleSearch}
                     />
                     {usernames.length > 0 &&  (
-                        <ol className="username-list">
+                        <ol className="homepage-username-list">
                         {filteredUsernames.map((filteredUsername, index) => (
                             
                                 <li key={index} onClick={() => handlePersonPage(filteredUsername)}>
@@ -277,21 +327,21 @@ function Header({  usernames, followers, following }) {
                         </ol>
                     )}
                 </div>
-                <div id="account-properties">
+                <div id="homepage-account-properties">
                     <div>
-                        <span id="Post" onClick={handlePost}>
+                        <span id="homepage-Post" onClick={handlePost}>
                             Post
                         </span>
                     </div>
                     
                     <div>
-                        <span id="following" onClick={showFollowing}>
+                        <span id="homepage-following" onClick={showFollowing}>
                             Following
                         </span>
                         
                     </div>
                     <div>
-                        <span id="logout" onClick={handleLogout}>
+                        <span id="homepage-logout" onClick={handleLogout}>
                             Logout
                         </span>
                         
@@ -308,7 +358,7 @@ function GetFollowingBlogs({blogs, isLoggedInUser}) {
     blogs.map((blog, index) => (console.log(blog.id)));
 
     function loadMore() {
-        let currHt = document.querySelector(".myAllBlogs").style;
+        let currHt = document.querySelector(".homepage-myAllBlogs").style;
         console.log(currHt.height);
     }
 
@@ -339,15 +389,15 @@ function GetLoggedInUserBlogs({ blogs, isLoggedInUser }) {
     
 
     function loadMore() {
-        let currHt = document.querySelector(".myAllBlogs").style;
+        let currHt = document.querySelector(".homepage-myAllBlogs").style;
         console.log(currHt.height);
         // document.querySelector(".myAllBlogs").style.height = calc(document.querySelector(".myAllBlogs").style.height *2) ;
     }
 
     return (
         <>
-            <div id="myBlogs">
-                <p style={{ fontSize: 30 + "px", display: "flex", marginLeft: 640 + "px" }}> My Blogs </p>
+            <div id="homepage-myBlogs">
+                <p style={{ fontSize: 30 + "px", display: "flex", marginLeft: 710 + "px" }}> My Blogs </p>
                 {blogs.map((blog, index) => (
                     <GetOneBlog
                         username={null}
@@ -379,26 +429,26 @@ function GetOneBlog({ username,blog_id, title, content, likesCount, timeStamp, i
     };
 
     return (
-        <div className="blog" onClick={showBlogInSeperatePage}>
-            <div className="blog-header">
+        <div className="homepage-blog" onClick={showBlogInSeperatePage}>
+            <div className="homepage-blog-header">
             {/* <p>{username}</p> */}
-            <p id="username">{username}</p>
-            {isLoggedInUser === true ? <Link to={`/fullContent/true/${title}/${content}/${likesCount}/${timeStamp}`}><p id="blog-title" onClick={showBlogInFullScreen}>{title}</p></Link> : <Link to={`/fullContent/false/${title}/${content}/${likesCount}/${timeStamp}/${blog_id}`}><p id="blog-title" onClick={showBlogInFullScreen}>{title}</p></Link> }
+            <p id="homepage-username">{username}</p>
+            {isLoggedInUser === true ? <Link to={`/fullContent/true/${title}/${content}/${likesCount}/${timeStamp}`}><p id="homepage-blog-title" onClick={showBlogInFullScreen}>{title}</p></Link> : <Link to={`/fullContent/false/${title}/${content}/${likesCount}/${timeStamp}/${blog_id}`}><p id="homepage-blog-title" onClick={showBlogInFullScreen}>{title}</p></Link> }
                 
             
                 <p>Created at: {timeStamp}</p>
             </div>
-            <div className="content">
+            <div className="homepage-content">
                 {content}
             </div>
-            <div className="blog-footer">
-                <div className="likes">
+            <div className="homepage-blog-footer">
+                <div className="homepage-likes">
                     <img src={like_pic} alt="Likes" />
-                    <p className="likes" style={{ margin: 0 + "px", marginLeft: 5 + "px" }}>
+                    <p className="homepage-likes" style={{ margin: 0 + "px", marginLeft: 5 + "px" }}>
                         {likesCount}
                     </p>
                 </div>
-                <div className="comments">
+                <div className="homepage-comments">
                     <Link to={`/showComments/${blog_id}/${isLoggedInUser}`}>Comments</Link>
                 </div>
             </div>
