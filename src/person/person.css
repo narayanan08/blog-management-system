@@ -1,0 +1,27 @@
+.person-logo{
+    background-color: #333;
+    width:100%;
+    color:#fff;
+    font-size: 60px;
+    display: flex;
+}
+
+.person-username{
+    color:black;
+    font-size: 60px;
+    /* display: flex; */
+    margin-bottom: 0px;
+    /* padding:0px 0px 0px 20px; */
+}
+
+.person-username-button{
+    display: inline;
+    
+}
+#person-button{
+    /* display: flex; */
+    margin-top:0px;
+    font-size: 30px;
+    background-color: #333;
+    color:#fff
+}

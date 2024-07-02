@@ -1,0 +1,183 @@
+/* General styles */
+homepage-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#homepage-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#homepage-home-page-search {
+  position: relative;
+}
+
+#homepage-home-page-search input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.homepage-username-list {
+  position: absolute;
+  top: 40px;
+  background: #fff;
+  width: 320px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding-left: 0px;
+}
+
+
+.homepage-username-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  
+}
+
+.homepage-username-list li:hover {
+  background-color: #f0f0f0;
+}
+
+#homepage-account-properties {
+  display: flex;
+  align-items: center;
+}
+
+#homepage-account-properties div {
+  margin-left: 20px;
+}
+
+#homepage-account-properties span {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #444;
+  transition: background-color 0.3s;
+}
+
+#homepage-account-properties span:hover {
+  background-color: #555;
+}
+
+/* Main body styles */
+#homepage-main-body {
+  display: flex;
+  padding: 20px;
+}
+
+#homepage-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#homepage-decoration {
+  flex: 0.3;
+  padding: 20px;
+}
+
+#homepage-myBlogs {
+  margin-bottom: 20px;
+}
+
+.homepage-blog {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.homepage-blog:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.homepage-blog-header p {
+  margin: 0;
+}
+
+#homepage-blog-title {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+  display:flex;
+  padding-right:0px;
+}
+
+#homepage-username{
+  font-size: 18px;
+  font-weight: bold;
+  
+  color: #333;
+}
+
+#homepage-blog-title:hover {
+  color: #007bff;
+}
+
+.homepage-content {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.homepage-blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage-likes, .homepage-comments {
+  display: flex;
+  align-items: center;
+}
+
+.homepage-likes img {
+  width: 20px;
+  height: 20px;
+}
+
+.homepage-likes p {
+  margin: 0 0 0 5px;
+}
+
+.homepage-comments a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.homepage-comments a:hover {
+  color: #0056b3;
+}
